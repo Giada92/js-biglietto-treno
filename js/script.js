@@ -21,22 +21,24 @@ var costoKm = 0.21;
 console.log(costoKm);
 
 //sconto del biglietto minorenni
-var scontoMinorenni = 0.2;
-console.log(scontoMinorenni);
+//var scontoMinorenni = 0.2;
+//console.log(scontoMinorenni);
 
 //sconto del biglietto over65
-var scontoOver = 0.4;
-console.log(scontoOver);
+//var scontoOver = 0.4;
+//console.log(scontoOver);
 
 //prezzo biglietto
 var prezzoBiglietto = kmPercorrere * costoKm;
 console.log(prezzoBiglietto);
 
-//prezzo biglietto per i minorenni
-var prezzoMinorenni = prezzoBiglietto * scontoMinorenni;
+//sconto del biglietto per i minorenni
+var scontoMinorenni = prezzoBiglietto * 0.2;
+console.log(scontoMinorenni);
 
-//prezzo biglietto per over65
-var prezzoOver = prezzoBiglietto * scontoOver;
+//sconto del biglietto per over65
+var scontoOver = prezzoBiglietto * 0.4;
+console.log(scontoOver);
 
 //prezzo del biglietto in base all'età
 var prezzo;
@@ -45,10 +47,10 @@ if (etaPasseggero >= 18 && etaPasseggero < 65) {
     prezzo = Math.round((prezzoBiglietto) * 100) / 100;
     console.log(prezzo);
 }else if (etaPasseggero < 18) {
-    prezzo = Math.round((prezzoBiglietto - prezzoMinorenni)  * 100) / 100;
+    prezzo = Math.round((prezzoBiglietto - scontoMinorenni)  * 100) / 100;
     console.log(prezzo);
 }else {
-    prezzo = Math.round((prezzoBiglietto - prezzoOver)  * 100) / 100;
+    prezzo = Math.round((prezzoBiglietto - scontoOver)  * 100) / 100;
     console.log(prezzo);
 }
 
