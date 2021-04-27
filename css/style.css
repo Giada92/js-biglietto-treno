@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: linear-gradient(to bottom,#00A8B9 , #00B8A9);
+}
+
+.box {
+    width: 600px;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+p {
+    padding: 15px 0;
+}
+
+#km_percorsi,
+#eta_passeggero {
+    font-weight: bold;
+}
+
+#costo_biglietto{
+    font-weight: bold;
+    background-color: yellow;
+}
